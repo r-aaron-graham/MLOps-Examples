@@ -24,3 +24,7 @@ The script uses scikit-learn's bundled diabetes dataset, a fixed train/test spli
 | [DVC command sketch](Data%20Versioning%20with%20DVC.txt) | A dataset, training script, and commands compatible with your DVC version. |
 | [Dockerfile sketch](Dockerfile%20for%20Model%20Containerization.txt) | A FastAPI application and dependency manifest. |
 | [Deployment call](mlops_example.py) | A deployment script. The Python file illustrates calling it with `subprocess`. |
+
+## Run a deployment script
+
+Use `python mlops_example.py /path/to/deploy_model.sh` with a Bash script you have reviewed. It runs from the script directory and returns its exit status so failed deployments are visible to automation. A missing script produces an argument error. Bash must be installed.
